@@ -1,0 +1,33 @@
+================================================================================
+PROYECTO: LABORATORIO 1 - Forward
+CURSO: Derivados Financieros
+================================================================================
+INTEGRANTES:
+  • Santiago Toro Cadavid - 1040739414
+  • Yenny Carolina Serna Chaverra - 1017210528
+  • Daniela Perez Meza - 1017220748
+================================================================================
+
+
+RESUMEN EJECUTIVO - FORWARD USD/COP
+================================================================================
+PARÁMETROS:
+• Spot Actual: $3,688.46
+• Forward: $3,968.63
+• Plazo: 6 meses
+• Simulaciones: 50,000
+
+RESULTADOS:
+• Media Spot Futuro: $3,688.83
+• Escenarios Protegidos: 0.00%
+• Valor Esperado: $-13,990,098.54
+• VaR 95%: $3,643.41
+
+RECOMENDACIÓN:
+El forward elimina el riesgo cambiario pero tiene un costo de oportunidad.
+Conveniente si hay alta aversión al riesgo.
+
+
+================================================================================
+Generado: 2026-03-27 10:40:10
+================================================================================

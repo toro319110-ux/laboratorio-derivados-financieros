@@ -1,0 +1,27 @@
+================================================================================
+PROYECTO: LABORATORIO 1 - Punto 1
+CURSO: Derivados Financieros
+================================================================================
+INTEGRANTES:
+  • Santiago Toro Cadavid - 1040739414
+  • Yenny Carolina Serna Chaverra - 1017210528
+  • Daniela Perez Meza - 1017220748
+================================================================================
+
+
+RESUMEN EJECUTIVO - LABORATORIO 1 PUNTO 1
+================================================================================
+RESULTADOS PRINCIPALES:
+• TRM Actual: $3,688.46 COP/USD
+• Expectativa 12 meses: $4,004 COP/USD
+• Variación: +8.55%
+• Escenario Más Probable: Base (55%) - $3,900 COP/USD
+
+RECOMENDACIÓN:
+La TRM muestra depreciación moderada del COP.
+Monitorear: tasas, petróleo, riesgo fiscal, electoral.
+
+
+================================================================================
+Generado: 2026-03-27 10:40:12
+================================================================================
