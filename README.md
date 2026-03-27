@@ -37,6 +37,7 @@
 - [🚀 Cómo Ejecutar los Códigos](#-cómo-ejecutar-los-códigos)
 
 ---
+<img width="4170" height="2371" alt="trm_historico_5anos" src="https://github.com/user-attachments/assets/0ec7f798-f405-4638-9d88-086c43912fdf" />
 
 ## 📊 Resumen Ejecutivo
 
