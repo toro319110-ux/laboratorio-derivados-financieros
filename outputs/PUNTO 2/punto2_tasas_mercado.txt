@@ -1,0 +1,61 @@
+================================================================================
+PROYECTO: LABORATORIO 1 - Punto 2
+CURSO: Derivados Financieros
+================================================================================
+INTEGRANTES:
+  • Santiago Toro Cadavid - 1040739414
+  • Yenny Carolina Serna Chaverra - 1017210528
+  • Daniela Perez Meza - 1017220748
+================================================================================
+
+TASAS DE MERCADO AMERICANO - EQUIPMENT LOAN
+================================================================================
+
+SBA 7(a) Loan:
+  Tasa Mín: 9.50%
+  Tasa Máx: 11.50%
+  Promedio: 10.50%
+  Plazo Máx: 10 años
+  Fuente: SBA.gov - Small Business Administration
+
+Equipment Loan (Maquinaria):
+  Tasa Mín: 7.00%
+  Tasa Máx: 9.50%
+  Promedio: 8.25%
+  Plazo Máx: 10 años
+  Fuente: BankRate.com - Commercial Equipment Loans
+
+Commercial Bank Loan:
+  Tasa Mín: 7.50%
+  Tasa Máx: 10.00%
+  Promedio: 8.75%
+  Plazo Máx: 15 años
+  Fuente: Federal Reserve - Commercial & Industrial Loans
+
+Wells Fargo Equipment Financing:
+  Tasa Mín: 7.25%
+  Tasa Máx: 9.00%
+  Promedio: 8.12%
+  Plazo Máx: 10 años
+  Fuente: wellsfargo.com (Marzo 2026)
+
+JPMorgan Chase Business Loan:
+  Tasa Mín: 7.00%
+  Tasa Máx: 8.75%
+  Promedio: 7.87%
+  Plazo Máx: 10 años
+  Fuente: jpmorganchase.com (Marzo 2026)
+
+Bank of America Equipment Loan:
+  Tasa Mín: 7.50%
+  Tasa Máx: 9.25%
+  Promedio: 8.37%
+  Plazo Máx: 10 años
+  Fuente: bankofamerica.com (Marzo 2026)
+
+
+TASA SELECCIONADA: 8.25%
+
+================================================================================
+Generado: 2026-03-26 10:28:29
+================================================================================

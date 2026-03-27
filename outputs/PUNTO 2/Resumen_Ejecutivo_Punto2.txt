@@ -1,0 +1,38 @@
+================================================================================
+PROYECTO: LABORATORIO 1 - Punto 2
+CURSO: Derivados Financieros
+================================================================================
+INTEGRANTES:
+  • Santiago Toro Cadavid - 1040739414
+  • Yenny Carolina Serna Chaverra - 1017210528
+  • Daniela Perez Meza - 1017220748
+================================================================================
+
+
+RESUMEN EJECUTIVO - LABORATORIO 1 PUNTO 2
+================================================================================
+
+INVERSIÓN:
+• Maquinaria Amarilla: $95,292.89 USD ($351,484,013.05 COP)
+• Inicial (10%): $9,529.29 USD
+• Crédito: $85,763.60 USD
+
+CONDICIONES DEL CRÉDITO:
+• Tasa: 8.25% anual (mercado USA)
+• Plazo: 10 años
+• Pagos: 40 cuotas trimestrales
+• Cuota: $3,169.62 USD ($11,691,012.50 COP)
+
+COSTOS TOTALES:
+• Total a Pagar: $126,784.76 USD
+• Total Intereses: $41,021.15 USD
+• Costo Financiero: 47.83%
+
+RECOMENDACIÓN:
+El crédito en USD es competitivo vs tasas locales. Se requiere cobertura
+cambiaria (forwards) para proteger los pagos en pesos colombianos.
+
+
+================================================================================
+Generado: 2026-03-26 10:28:29
+================================================================================

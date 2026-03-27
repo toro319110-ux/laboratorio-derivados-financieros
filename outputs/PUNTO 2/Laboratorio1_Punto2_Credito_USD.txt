@@ -1,0 +1,110 @@
+================================================================================
+PROYECTO: LABORATORIO 1 - Punto 2
+CURSO: Derivados Financieros
+================================================================================
+INTEGRANTES:
+  • Santiago Toro Cadavid - 1040739414
+  • Yenny Carolina Serna Chaverra - 1017210528
+  • Daniela Perez Meza - 1017220748
+================================================================================
+
+
+LABORATORIO 1 - PUNTO 2: SIMULACIÓN DE CRÉDITO DE MAQUINARIA (USD)
+================================================================================
+
+1. INFORMACIÓN GENERAL
+----------------------
+Valor Maquinaria Amarilla: $95,292.89 USD
+Valor en COP (TRM $3,688.46): $351,484,013.05 COP
+Inicial (10%): $9,529.29 USD ($35,148,401.30 COP)
+Monto a Financiar: $85,763.60 USD ($316,335,611.74 COP)
+Tasa de Interés: 8.25% anual
+Plazo: 10 años (40 trimestres)
+Frecuencia de Pago: Trimestral
+Sistema de Amortización: Francés (cuota constante)
+
+2. FUENTES DE TASAS DE INTERÉS (MERCADO AMERICANO)
+--------------------------------------------------
+Entidad                    | Tasa Mín | Tasa Máx | Promedio | Plazo
+---------------------------|----------|----------|----------|-------
+SBA 7(a) Loan              |    9.50%   |   11.50%   |   10.50%   | 10 años
+Equipment Loan (Maquinaria) |    7.00%   |    9.50%   |    8.25%   | 10 años
+Commercial Bank Loan       |    7.50%   |   10.00%   |    8.75%   | 15 años
+Wells Fargo Equipment Financing |    7.25%   |    9.00%   |    8.12%   | 10 años
+JPMorgan Chase Business Loan |    7.00%   |    8.75%   |    7.87%   | 10 años
+Bank of America Equipment Loan |    7.50%   |    9.25%   |    8.37%   | 10 años
+
+Tasa Seleccionada: 8.25% (Equipment Loan - BankRate.com)
+
+3. RESUMEN DEL CRÉDITO
+----------------------
+Cuota Trimestral (USD): $3,169.62
+Cuota Trimestral (COP): $11,691,012.50
+Total a Pagar (USD): $126,784.76
+Total Intereses (USD): $41,021.15
+Costo Financiero Total: 47.83% del monto financiado
+
+4. FÓRMULA SISTEMA FRANCÉS
+--------------------------
+A = P × [i(1+i)^n] / [(1+i)^n - 1]
+
+Donde:
+- A = Cuota periódica constante = $3,169.62 USD
+- P = Principal del crédito = $85,763.60 USD
+- i = Tasa periódica (trimestral) = 2.0625%
+- n = Número de períodos = 40 trimestres
+
+5. PRIMEROS 10 PERÍODOS DE AMORTIZACIÓN
+---------------------------------------
+ Periodo  Trimestre  Cuota_Total     Interes  Amortizacion  Saldo_Pendiente  Saldo_Acumulado_Amortizado  Anio
+       1 Año 1 - T1  3169.618892 1768.874271   1400.744621     84362.856379                 1400.744621     1
+       2 Año 1 - T2  3169.618892 1739.983913   1429.634979     82933.221400                 2830.379600     1
+       3 Año 1 - T3  3169.618892 1710.497691   1459.121201     81474.100199                 4289.500801     1
+       4 Año 1 - T4  3169.618892 1680.403317   1489.215575     79984.884624                 5778.716376     1
+       5 Año 2 - T1  3169.618892 1649.688245   1519.930647     78464.953977                 7298.647023     2
+       6 Año 2 - T2  3169.618892 1618.339676   1551.279216     76913.674761                 8849.926239     2
+       7 Año 2 - T3  3169.618892 1586.344542   1583.274350     75330.400411                10433.200589     2
+       8 Año 2 - T4  3169.618892 1553.689508   1615.929383     73714.471027                12049.129973     2
+       9 Año 3 - T1  3169.618892 1520.360965   1649.257927     72065.213100                13698.387900     3
+      10 Año 3 - T2  3169.618892 1486.345020   1683.273872     70381.939229                15381.661771     3
+
+6. ÚLTIMOS 10 PERÍODOS DE AMORTIZACIÓN
+--------------------------------------
+ Periodo   Trimestre  Cuota_Total    Interes  Amortizacion  Saldo_Pendiente  Saldo_Acumulado_Amortizado  Anio
+      31  Año 8 - T3  3169.618892 585.306406   2584.312486     25794.179904                59969.421096     8
+      32  Año 8 - T4  3169.618892 532.004961   2637.613931     23156.565973                62607.035027     8
+      33  Año 9 - T1  3169.618892 477.604173   2692.014719     20464.551254                65299.049746     9
+      34  Año 9 - T2  3169.618892 422.081370   2747.537522     17717.013732                68046.587268     9
+      35  Año 9 - T3  3169.618892 365.413408   2804.205484     14912.808248                70850.792752     9
+      36  Año 9 - T4  3169.618892 307.576670   2862.042222     12050.766026                73712.834974     9
+      37 Año 10 - T1  3169.618892 248.547049   2921.071843      9129.694183                76633.906817    10
+      38 Año 10 - T2  3169.618892 188.299943   2981.318949      6148.375234                79615.225766    10
+      39 Año 10 - T3  3169.618892 126.810239   3042.808653      3105.566581                82658.034419    10
+      40 Año 10 - T4  3169.618892  64.052311   3105.566581         0.000000                85763.601000    10
+
+7. ANÁLISIS POR AÑO
+-------------------
+ Anio  Cuota_Total     Interes  Amortizacion
+    1 12678.475568 6899.759191   5778.716376
+    2 12678.475568 6408.061972   6270.413596
+    3 12678.475568 5874.527406   6803.948162
+    4 12678.475568 5295.595654   7382.879914
+    5 12678.475568 4667.403978   8011.071590
+    6 12678.475568 3985.760967   8692.714601
+    7 12678.475568 3246.118575   9432.356993
+    8 12678.475568 2443.541773  10234.933795
+    9 12678.475568 1572.675621  11105.799947
+   10 12678.475568  627.709542  12050.766026
+
+8. CONCLUSIONES
+---------------
+• El crédito en USD tiene una tasa competitiva del 8.25% anual
+• La cuota trimestral constante facilita la planificación financiera
+• El costo financiero total representa 47.83% del monto financiado
+• Los primeros años tienen mayor componente de interés (típico en sistema francés)
+• Se recomienda cubrir el riesgo cambiario con forwards (Punto 5)
+
+
+================================================================================
+Generado: 2026-03-26 10:28:29
+================================================================================
