@@ -1144,12 +1144,405 @@ REFERENCIAS BIBLIOGRÁFICAS
 10. Asociación Bancaria de Colombia. (2026). Tasas de Interés de 
     Referencia para Créditos en Pesos.
 
+LABORATORIO 1 - PUNTO 4: SIMULACIÓN MONTE CARLO - MOVIMIENTO BROWNIANO GEOMÉTRICO
+PROYECTO: Derivados Financieros
+FECHA: 26 de marzo de 2026
+================================================================================
 
+================================================================================
+1. INFORMACIÓN GENERAL
+================================================================================
 
+1.1 Objetivo del Punto 4
+------------------------
+Realizar una simulación Monte Carlo utilizando Movimiento Browniano Geométrico 
+(MBG) para proyectar la TRM a 5 años, comparando dos distribuciones: Normal 
+y T-Student, con el fin de evaluar el riesgo cambiario del crédito en USD.
 
+1.2 Período de Análisis
+-----------------------
+• Datos históricos: 2019-2024 (5 años)
+• Período de proyección: 5 años (60 meses)
+• Número de simulaciones: 1,000 trayectorias
+• Fecha inicial TRM: $3,688.46 COP/USD (26 de marzo de 2026)
 
+<img width="3508" height="1712" alt="grafica_serie_historica" src="https://github.com/user-attachments/assets/444008d6-557c-45e6-8922-186bd264ef12" />
 
+Propósito: Mostrar la evolución histórica de la TRM durante los últimos 5 años
+Justificación: Permite visualizar la tendencia, volatilidad y eventos extremos 
+               que han afectado la tasa de cambio
 
+================================================================================
+2. ANÁLISIS ESTADÍSTICO DE RETORNOS
+================================================================================
+
+2.1 Estadísticos Descriptivos de Retornos Mensuales
+---------------------------------------------------
+[TABLA 1: Estadísticos de Retornos]
+
+<img width="777" height="207" alt="image" src="https://github.com/user-attachments/assets/4219097a-9a4f-48c0-ad98-375ab0f6fac5" />
+
+📊 INTERPRETACIÓN DE LOS ESTADÍSTICOS:
+
+✓ MEDIA POSITIVA (1.20% mensual):
+  • La TRM ha tenido una tendencia alcista en promedio
+  • Esto representa una devaluación promedio del peso colombiano
+  • Equivale a aproximadamente 15.4% anual (1.012^12 - 1)
+
+✓ VOLATILIDAD ALTA (6.02% mensual):
+  • La desviación estándar es 5 veces mayor que la media
+  • Esto indica ALTO RIESGO en la proyección
+  • Los retornos son muy dispersos alrededor del promedio
+
+✓ ASIMETRÍA POSITIVA (Skewness = 2.50):
+  • La distribución tiene cola larga hacia la derecha
+  • Hay más probabilidad de devaluaciones extremas que apreciaciones
+  • Los eventos extremos son principalmente alzas de la TRM
+
+✓ CURTOSIS MUY ALTA (Kurtosis = 13.25):
+  • MUCHO mayor que 3 (valor de distribución normal)
+  • Indica "colas pesadas" (fat tails)
+  • Los eventos extremos son MÁS FRECUENTES de lo que predice una normal
+  • ESTO JUSTIFICA USAR DISTRIBUCIÓN T-STUDENT
+
+✓ RANGO EXTREMO (-12.70% a +32.30%):
+  • El retorno máximo es 2.5 veces mayor en magnitud que el mínimo
+  • Confirma la asimetría positiva
+  • Las devaluaciones bruscas son más intensas que las apreciaciones
+
+<img width="5970" height="3435" alt="grafica_dashboard" src="https://github.com/user-attachments/assets/d38e2665-78aa-41ed-8a0b-8ca79ed0b530" />
+
+Propósito: Panel de 6 gráficos mostrando:
+           1. Serie Histórica TRM
+           2. Distribución Retornos
+           3. QQ-Plot
+           4. BMG - Normal
+           5. BMG - T-Student
+           6. Distribución Final
+Justificación: Proporciona una visión completa del análisis estadístico y 
+               las simulaciones realizadas
+================================================================================
+3. METODOLOGÍA DE SIMULACIÓN
+================================================================================
+
+3.1 Movimiento Browniano Geométrico (MBG)
+-----------------------------------------
+Fórmula del MBG:
+S(t) = S(0) × exp[(μ - σ²/2)t + σ×W(t)]
+
+Donde:
+• S(t) = TRM en el tiempo t
+• S(0) = TRM inicial ($3,688.46)
+• μ = Media de retornos (0.0120276344 mensual)
+• σ = Desviación estándar (0.0601888064 mensual)
+• W(t) = Proceso de Wiener (movimiento browniano estándar)
+• t = Tiempo en meses (0 a 60)
+
+3.2 Distribuciones Comparadas
+-----------------------------
+a) DISTRIBUCIÓN NORMAL:
+   • Supone retornos normalmente distribuidos
+   • Colas delgadas (subestima eventos extremos)
+   • Más simple computacionalmente
+   
+b) DISTRIBUCIÓN T-STUDENT:
+   • Considera colas pesadas (fat tails)
+   • Mejor captura eventos extremos
+   • Más conservadora en estimación de riesgo
+   • Justificada por kurtosis = 13.25
+
+3.3 Parámetros de Simulación
+----------------------------
+• Número de trayectorias: 1,000
+• Período: 60 meses (5 años)
+• Paso de tiempo: 1 mes
+• Semilla: Aleatoria
+• TRM inicial: $3,688.46 COP/USD
+
+================================================================================
+4. RESULTADOS DE LA SIMULACIÓN
+================================================================================
+
+4.1 Estadísticos de la TRM Final (Mes 60)
+-----------------------------------------
+[TABLA 2: Comparación Distribuciones - TRM Final]
+
+<img width="834" height="186" alt="image" src="https://github.com/user-attachments/assets/72551c30-5294-4343-91b3-61fc16f65a69" />
+
+📊 COMPARACIÓN DE RESULTADOS:
+
+✓ MEDIA SIMILAR:
+  • Normal: $12,333.31
+  • T-Student: $11,935.81
+  • Diferencia: $397.50 (3.23%)
+  • Ambas proyectan una TRM final de ~$12,000
+  
+✓ VOLATILIDAD DIFERENTE:
+  • Normal: $6,482.04 (52.6% de la media)
+  • T-Student: $5,731.62 (48.0% de la media)
+  • La normal muestra mayor dispersión absoluta
+  
+✓ VaR 95% (Value at Risk):
+  • Normal: $4,758.97
+  • T-Student: $5,131.61
+  • El T-Student es MÁS CONSERVADOR (mayor riesgo)
+  • Hay 95% de probabilidad de que la TRM esté POR ENCIMA de estos valores
+  
+✓ RANGO EXTREMO:
+  • Normal: $2,073.29 a $71,548.74 (rango de $69,475.45)
+  • T-Student: $2,548.01 a $38,593.56 (rango de $36,045.55)
+  • La normal tiene un máximo CASI EL DOBLE que T-Student
+  • Pero T-Student tiene un mínimo más alto
+
+<img width="2605" height="1587" alt="grafica_comparacion" src="https://github.com/user-attachments/assets/e09fc41a-81bb-4c87-9574-b7ae004d2189" />
+
+Propósito: Boxplot comparativo mostrando la distribución de la TRM final 
+           para Normal vs T-Student
+Justificación: Visualiza claramente las diferencias en dispersión, outliers 
+               y tendencia central entre ambas distribuciones
+
+4.2 Interpretación del VaR 95%
+------------------------------
+Análisis Estudiantil:
+
+¿QUÉ SIGNIFICA EL VaR 95%?
+
+Para la distribución T-Student (la más conservadora):
+• VaR 95% = $5,131.61
+• Interpretación: "Hay 95% de confianza de que la TRM al final del año 5 
+  será MAYOR a $5,131.61"
+• O alternativamente: "Solo hay 5% de probabilidad de que la TRM esté 
+  POR DEBAJO de $5,131.61"
+
+IMPLICACIONES PARA EL CRÉDITO:
+• TRM actual: $3,688.46
+• VaR 95% (T-Student): $5,131.61
+• Variación: +39.13%
+• Esto significa que en el PEOR CASO (5% de probabilidad), la TRM podría 
+  estar por debajo de $5,131.61, pero en el 95% de los casos estará POR ENCIMA
+
+• Impacto en el crédito:
+  - Cuota actual en pesos: $11,691,012 (con TRM $3,688.46)
+  - Cuota con VaR 95%: $16,269,747 (con TRM $5,131.61)
+  - Aumento: $4,578,735 por trimestre (+39.13%)
+
+================================================================================
+5. ANÁLISIS DE TRAYECTORIAS
+================================================================================
+
+5.1 Comportamiento de las Simulaciones
+--------------------------------------
+Análisis Estudiantil:
+
+📈 PATRONES OBSERVADOS:
+
+✓ DIVERGENCIA CRECIENTE:
+  • Al inicio (mes 0-12): Las trayectorias están agrupadas
+  • Mes 24-36: Comienza la dispersión significativa
+  • Mes 48-60: Máxima dispersión (incertidumbre máxima)
+  
+✓ TENDENCIA GENERAL ALCISTA:
+  • La mayoría de trayectorias muestran crecimiento
+  • Algunas trayectorias extremas alcanzan valores muy altos
+  • Pocas trayectorias muestran depreciación del dólar
+
+✓ OUTLIERS EXTREMOS:
+  • Distribución Normal: Algunos valores superan $70,000
+  • Distribución T-Student: Máximo alrededor de $38,000
+  • La normal es más "extrema" en los valores máximos
+
+5.2 Comparación Visual de Distribuciones
+----------------------------------------
+
+<img width="5970" height="3435" alt="grafica_dashboard" src="https://github.com/user-attachments/assets/a832c2d1-b7f4-47a7-bf0d-bdf39971d41c" />
+
+Propósito: Comparar visualmente:
+           - Panel 4: Trayectorias BMG con distribución Normal
+           - Panel 5: Trayectorias BMG con distribución T-Student
+           - Panel 6: Histograma comparativo de distribuciones finales
+Justificación: Muestra cómo difieren las trayectorias simuladas y la 
+               distribución de resultados finales
+================================================================================
+6. EVALUACIÓN DE RIESGO CAMBIARIO
+================================================================================
+
+6.1 Impacto en el Crédito de Maquinaria
+---------------------------------------
+[TABLA 3: Impacto del Riesgo Cambiario en el Crédito]
+
+ width="692" height="199" alt="image" src="https://github.com/user-attachments/assets/391d68b6-a51c-4ec5-ab74-03dbfb96bb3d" />
+
+💰 IMPACTO FINANCIERO DRÁMATICO:
+
+✓ ESCENARIO PROMEDIO (T-Student):
+  • Cuota actual: $11.69 millones
+  • Cuota proyectada (5 años): $37.81 millones
+  • Aumento: $26.12 millones (+223.3%)
+  
+  Esto significa que, EN PROMEDIO, la cuota se TRIPLICARÍA en 5 años.
+
+✓ ESCENARIO VaR 95% (PEOR CASO del 95%):
+  • Cuota con VaR 95%: $16.27 millones
+  • Aumento: $4.58 millones (+39.13%)
+  
+  Incluso en un escenario "conservador" (95% confianza), la cuota 
+  aumentaría casi 40%.
+
+✓ ESCENARIO MÍNIMO (MEJOR CASO):
+  • Cuota mínima T-Student: $8.08 millones
+  • Disminución: -$3.61 millones (-30.91%)
+  
+  En el mejor de los casos, la cuota podría reducirse 31%, pero esto 
+  solo ocurre en el 5% de las simulaciones.
+
+6.2 Implicaciones para la Empresa
+---------------------------------
+Análisis Estudiantil:
+
+⚠️ RIESGOS IDENTIFICADOS:
+
+1. RIESGO DE FLUJO DE CAJA:
+   • La cuota trimestral podría aumentar entre $4.58M y $26.12M
+   • Esto representa un estrés financiero significativo
+   • La empresa debe asegurar ingresos crecientes o cobertura
+
+2. RIESGO DE SOLVENCIA:
+   • Si los ingresos no crecen al ritmo de la TRM, la capacidad 
+     de pago se deteriora
+   • Podría requerirse refinanciación o garantías adicionales
+
+3. RIESGO DE RENTABILIDAD:
+   • El costo real del crédito aumenta con la devaluación
+   • La rentabilidad del proyecto de maquinaria se reduce
+   • Podría volverse inviable si la TRM supera $10,000
+
+4. RIESGO DE COLAS PESADAS:
+   • La kurtosis de 13.25 indica que los eventos extremos son 
+     MUCHO más probables de lo que sugiere una distribución normal
+   • No se puede subestimar el riesgo de devaluaciones bruscas
+
+================================================================================
+7. COMPARACIÓN NORMAL vs T-STUDENT
+================================================================================
+
+7.1 Ventajas y Desventajas
+--------------------------
+[TABLA 4: Comparación Metodológica]
+
+<img width="766" height="185" alt="image" src="https://github.com/user-attachments/assets/86e379ba-9205-4ead-a100-4c75fa534a02" />
+
+📊 ¿POR QUÉ T-STUDENT ES MEJOR EN ESTE CASO?
+
+✓ RAZÓN 1: KURTOSIS ALTA (13.25)
+  • Una distribución normal tiene kurtosis = 3
+  • Nuestros datos tienen kurtosis = 13.25 (4.4 veces mayor)
+  • Esto indica COLAS PESADAS que la normal no captura
+  
+✓ RAZÓN 2: EVENTOS EXTREMOS REALES
+  • Histórico muestra saltos bruscos (COVID, crisis políticas)
+  • La T-Student permite estos "saltos" con mayor probabilidad
+  • La normal los considera "casi imposibles" cuando son frecuentes
+  
+✓ RAZÓN 3: MÁS CONSERVADOR
+  • VaR 95% T-Student ($5,131.61) > VaR 95% Normal ($4,758.97)
+  • Es mejor sobreestimar el riesgo que subestimarlo
+  • En finanzas, el conservadurismo protege contra sorpresas
+  
+✓ RAZÓN 4: MÁXIMOS MÁS REALISTAS
+  • Normal: $71,548 (poco realista en 5 años)
+  • T-Student: $38,593 (alto pero más creíble)
+  • La normal genera outliers extremos poco probables
+
+================================================================================
+8. CONCLUSIONES DEL PUNTO 4
+================================================================================
+
+8.1 Hallazgos Principales
+-------------------------
+✓ 1. ALTA VOLATILIDAD HISTÓRICA:
+   • Desviación estándar de 6.02% mensual
+   • Esto genera incertidumbre significativa en proyecciones
+   • El riesgo cambiario es REAL y SIGNIFICATIVO
+
+✓ 2. ASIMETRÍA POSITIVA (Skewness = 2.50):
+   • Mayor probabilidad de devaluaciones que apreciaciones
+   • Las colas derechas son más pesadas
+   • El riesgo es principalmente al alza del dólar
+
+✓ 3. COLAS PESADAS (Kurtosis = 13.25):
+   • Eventos extremos son 4.4 veces más probables que en una normal
+   • JUSTIFICA completamente el uso de T-Student
+   • Las crisis generan saltos bruscos en la TRM
+
+✓ 4. PROYECCIÓN ALCISTA:
+   • Media T-Student: $11,935.81 en 5 años (+223.5%)
+   • Tendencia estructural de devaluación del peso
+   • El crédito en USD es RIESGOSO sin cobertura
+
+✓ 5. VaR 95% CONSERVADOR:
+   • T-Student: $5,131.61 (+39.13% vs actual)
+   • Incluso en escenario "seguro", la TRM sube 39%
+   • El riesgo a la baja es limitado
+
+8.2 Recomendaciones
+-------------------
+📌 1. USAR DISTRIBUCIÓN T-STUDENT:
+   • Es estadísticamente más apropiada (kurtosis = 13.25)
+   • Proporciona estimaciones más conservadoras
+   • Mejor captura el riesgo de colas pesadas
+
+📌 2. COBERTURA CAMBIARIA OBLIGATORIA:
+   • La proyección media ($11,935) triplicaría la cuota
+   • Se recomienda forwards o opciones para cubrir 75-100%
+   • Sin cobertura, el proyecto es MUY RIESGOSO
+
+📌 3. MONITOREO CONTINUO:
+   • Recalcular simulaciones trimestralmente
+   • Ajustar parámetros (μ, σ) con datos recientes
+   • Actualizar estrategia de cobertura según resultados
+
+📌 4. ESTRÉS DE ESCENARIOS:
+   • Considerar escenarios de crisis (TRM > $15,000)
+   • Evaluar capacidad de pago en escenarios extremos
+   • Mantener liquidez adicional como colchón
+
+📌 5. EVALUAR INGRESOS EN USD:
+   • Si la empresa exporta, el riesgo se reduce naturalmente
+   • Buscar fuentes de ingresos en dólares
+   • Cobertura natural es la mejor estrategia
+
+8.3 Reflexión Final
+La simulación Monte Carlo con MBG nos ha permitido CUANTIFICAR el riesgo 
+cambiario de manera rigurosa. Los resultados son CONTUNDENTES:
+
+✓ Sin cobertura, el crédito en USD es una APUESTA de alto riesgo
+✓ La TRM muestra tendencia estructural alcista con alta volatilidad
+✓ Los eventos extremos (crisis) son más probables de lo que parece
+✓ La distribución T-Student es la herramienta adecuada para este análisis
+
+DECISIÓN RECOMENDADA:
+"FINANCIAR EN USD SOLO CON COBERTURA CAMBIARIA ADECUADA (FORWARDS/OPCIONES)"
+
+Sin cobertura, el riesgo de que la cuota se triplique en 5 años es REAL 
+y ESTADÍSTICAMENTE SIGNIFICATIVO.
+
+================================================================================
+REFERENCIAS BIBLIOGRÁFICAS
+================================================================================
+
+1. Hull, J. C. (2022). Options, Futures, and Other Derivatives. Pearson 
+   Education.
+2. Glasserman, P. (2003). Monte Carlo Methods in Financial Engineering. 
+   Springer.
+3. McNeil, A. J., Frey, R., & Embrechts, P. (2015). Quantitative Risk 
+   Management: Concepts, Techniques and Tools. Princeton University Press.
+4. Banco de la República de Colombia. (2026). Tasa Representativa del 
+   Mercado (TRM) Histórica. www.banrep.gov.co
+5. Shreve, S. E. (2004). Stochastic Calculus for Finance II: 
+   Continuous-Time Models. Springer Finance.
+6. Jorion, P. (2006). Value at Risk: The New Benchmark for Managing 
+   Financial Risk. McGraw-Hill.
+7. Investopedia. (2026). Geometric Brownian Motion. www.investopedia.com
 
 
 
