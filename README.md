@@ -729,6 +729,428 @@ REFERENCIAS BIBLIOGRÁFICAS
 10. Investopedia. (2026). French Amortization System. 
     www.investopedia.com
 
+LABORATORIO 1 - PUNTO 3: CRÉDITO EN PESOS Y ANÁLISIS DE COMPORTAMIENTO
+PROYECTO: Derivados Financieros
+FECHA: 26 de marzo de 2026
+================================================================================
+
+================================================================================
+1. INFORMACIÓN GENERAL DEL ANÁLISIS
+================================================================================
+
+1.1 Contexto del Estudio
+------------------------
+Este punto del laboratorio analiza el comportamiento del crédito en dólares 
+cuando se convierte a pesos colombianos, considerando la variación de la TRM 
+a lo largo de los 10 años del crédito. El objetivo es cuantificar el impacto 
+del riesgo cambiario en el costo real del financiamiento.
+
+[TABLA 1: Datos Generales del Análisis]
+
+<img width="699" height="186" alt="image" src="https://github.com/user-attachments/assets/1b15a233-5762-4c81-add8-f4173b8c71b6" />
+
+<img width="3570" height="1489" alt="punto3_trm_proyectada" src="https://github.com/user-attachments/assets/2b28e1ae-8aa0-4fc7-b192-6538bec519ff" />
+
+Propósito: Mostrar la evolución proyectada de la TRM durante los 40 trimestres
+Justificación: Permite visualizar la tendencia alcista de la TRM y su 
+               volatilidad a lo largo del período del crédito
+
+1.2 Metodología de Proyección de la TRM
+---------------------------------------
+Análisis Estudiantil:
+Para proyectar la TRM utilizamos un modelo que combina:
+
+✓ Tendencia histórica: Basada en el comportamiento de los últimos 5 años
+✓ Factores fundamentales: Diferencial de tasas, riesgo país, petróleo
+✓ Escenarios probabilísticos: Base (55%), Alcista (25%), Bajista (15%)
+✓ Componente estocástico: Volatilidad del 14.07% anual
+
+La proyección muestra una TRM que inicia en $3,688.46 y alcanza un máximo 
+proyectado de $5,133.03 (período 13), con una tendencia general alcista 
+pero con fluctuaciones significativas.
+
+================================================================================
+2. COMPARATIVO CRÉDITO USD vs COP
+================================================================================
+
+2.1 Análisis de Cuotas en Diferentes Monedas
+--------------------------------------------
+[TABLA 2: Comparativo Total a Pagar]
+
+<img width="830" height="147" alt="image" src="https://github.com/user-attachments/assets/6836559a-b26d-4e66-8335-97066fcc3271" />
+
+
+<img width="3570" height="1488" alt="punto3_comparativo_usd_cop" src="https://github.com/user-attachments/assets/26c6307a-9828-4136-961a-c994cd71a480" />
+
+
+Propósito: Comparar visualmente la cuota constante en USD vs la cuota 
+           variable en COP (dividida entre 1000 para mejor visualización)
+Justificación: Muestra claramente cómo la cuota en pesos varía significativamente 
+               debido a los cambios en la TRM, mientras que en dólares se mantiene constante
+2.2 Análisis de la Variación de Cuotas en Pesos
+-----------------------------------------------
+Explicación para Estudiantes:
+
+📊 OBSERVACIONES CLAVE:
+
+1. CUOTA EN USD (Línea Azul):
+   • Se mantiene CONSTANTE en $3,169.62 durante los 40 trimestres
+   • Esto es el sistema francés: siempre pagas lo mismo en dólares
+   • Fácil de planificar en moneda extranjera
+
+2. CUOTA EN COP (Línea Roja - escalada/1000):
+   • Inicia en ~$12,090 (período 1)
+   • Alcanza máximo de ~$16,330 (período 13)
+   • Termina en ~$14,282 (período 40)
+   • Variación total: +18.1% entre el primer y último período
+
+💡 ¿POR QUÉ CAMBIA LA CUOTA EN PESOS?
+Porque aunque pagas siempre los mismos dólares ($3,169.62), la TRM cambia:
+• Si la TRM SUBE → Pagas MÁS pesos por los mismos dólares
+• Si la TRM BAJA → Pagas MENOS pesos por los mismos dólares
+
+Ejemplo práctico:
+• Período 1: $3,169.62 × $3,814.57 = $12,090,728 COP
+• Período 13: $3,169.62 × $5,133.03 = $16,269,747 COP
+  → ¡$4.18 millones de pesos MÁS por la misma cuota en dólares!
+
+================================================================================
+3. IMPACTO DEL RIESGO CAMBIARIO
+================================================================================
+
+3.1 Cálculo del Impacto Cambiario
+---------------------------------
+[TABLA 3: Impacto de la Variación de la TRM]
+
+<img width="859" height="140" alt="image" src="https://github.com/user-attachments/assets/991b32af-df40-4c46-b316-d2295280b726" />
+
+Análisis Estudiantil:
+Este es el resultado MÁS IMPORTANTE del Punto 3. Nos muestra que:
+
+💰 EL RIESGO CAMBIARIO NOS CUESTA $111.4 MILLONES DE PESOS
+
+Traducción práctica:
+• Si la TRM se hubiera mantenido constante en $3,688.46, habríamos pagado 
+  $467.6 millones de pesos en total
+• Pero como la TRM subió a un promedio de $4,567.02, terminamos pagando 
+  $579.0 millones de pesos
+• LA DIFERENCIA DE $111.4 MILLONES es el costo del riesgo cambiario
+
+¿Es mucho o poco?
+• Representa un 23.82% adicional sobre el costo base
+• Equivale a casi el valor de la maquinaria inicial ($351.5 millones)
+• Es como si tuviéramos que comprar UN 23% MÁS de maquinaria
+
+3.2 Desglose del Impacto por Componentes
+----------------------------------------
+[TABLA 4: Desglose del Impacto Cambiario]
+
+<img width="830" height="136" alt="image" src="https://github.com/user-attachments/assets/d1a13457-c529-402b-8284-46dfcbac5618" />
+
+Explicación para Estudiantes:
+El impacto de $111.4 millones se divide en:
+
+1. IMPACTO EN INTERESES ($67.3 millones):
+   • Los intereses en dólares son fijos ($41,021.15)
+   • Pero al convertirlos a pesos con TRM más alta, cuestan más
+   • Representa el 60.5% del impacto total
+
+2. IMPACTO EN CAPITAL ($44.0 millones):
+   • El capital en dólares es fijo ($85,763.60)
+   • Pero al convertirlo a pesos con TRM más alta, cuesta más
+   • Representa el 39.5% del impacto total
+================================================================================
+4. ANÁLISIS DE ESCENARIOS DE TRM
+================================================================================
+
+4.1 Escenarios Proyectados a 10 Años
+------------------------------------
+[TABLA 5: Escenarios de TRM - Resumen]
+
+<img width="815" height="123" alt="image" src="https://github.com/user-attachments/assets/06b653f1-3751-4ec8-97aa-e0a70ccdfc4c" />
+
+<img width="3570" height="1488" alt="punto3_escenarios_trm" src="https://github.com/user-attachments/assets/5cdc427f-f6e1-43a6-ae2d-1879581a23de" />
+
+Propósito: Visualizar los tres escenarios (Base, Alcista, Bajista) de la TRM
+           junto con la TRM inicial de referencia
+Justificación: Permite comparar cómo diferentes escenarios afectan la evolución 
+               de la TRM y entender la incertidumbre del mercado cambiario
+
+4.2 Análisis Detallado por Escenario
+------------------------------------
+Análisis :
+
+📈 ESCENARIO BASE (55% de probabilidad):
+• TRM promedio: $4,567.02
+• Variación: +22.16%
+• Costo total en COP: $579.0 millones
+• Interpretación: Es el escenario MÁS PROBABLE. La TRM sube moderadamente 
+  pero con volatilidad. Es realista y alcanzable.
+
+📈 ESCENARIO ALCISTA (25% de probabilidad):
+• TRM máxima proyectada: $11,000.00
+• Variación: +96.56%
+• Costo total en COP: ~$1,240 millones
+• Interpretación: Escenario PESIMISTA. Ocurre si hay crisis económica, 
+  devaluación fuerte, o problemas fiscales graves en Colombia. 
+  ¡Casi se triplica el costo!
+
+📉 ESCENARIO BAJISTA (15% de probabilidad):
+• TRM mínima proyectada: $2,000.00
+• Variación: -15.95%
+• Costo total en COP: ~$393 millones
+• Interpretación: Escenario OPTIMISTA. Ocurre si el peso colombiano se 
+  fortalece significativamente. Sería lo MEJOR que nos podría pasar.
+
+4.3 Impacto Financiero por Escenario
+------------------------------------
+[TABLA 6: Impacto Financiero por Escenario]
+
+<img width="812" height="149" alt="image" src="https://github.com/user-attachments/assets/74f0e954-ff69-48fd-a426-4bf421275751" />
+
+Esta tabla muestra la IMPORTANCIA CRÍTICA de cubrir el riesgo cambiario:
+
+✓ En el mejor caso (Bajista): Nos ahorraríamos $186 millones
+✓ En el peor caso (Alcista): Perderíamos $661 millones adicionales
+
+La diferencia entre el mejor y peor escenario es de $847 MILLONES DE PESOS.
+¡Esto justifica completamente el uso de forwards para protegernos!
+
+================================================================================
+5. TABLA DE AMORTIZACIÓN EN PESOS (PRIMEROS 10 PERÍODOS)
+================================================================================
+
+5.1 Detalle de los Primeros 10 Trimestres
+-----------------------------------------
+[TABLA 7: Amortización - Primeros 10 Períodos (COP)]
+
+<img width="918" height="278" alt="image" src="https://github.com/user-attachments/assets/773e3ed7-09c9-4bd9-a927-3a761416657f" />
+
+📊 OBSERVACIONES IMPORTANTES:
+
+1. CRECIMIENTO DE LAS CUOTAS:
+   • Período 1: $12.09 millones
+   • Período 10: $16.05 millones
+   • Aumento: +32.7% en solo 2.5 años
+
+2. COMPONENTE DE INTERESES:
+   • Los intereses en pesos son ALTOS ($6.7-7.6 millones por trimestre)
+   • Esto se debe a la TRM proyectada en aumento
+   • Representan 55-60% de la cuota total
+
+3. SALDO PENDIENTE:
+   • Aunque pagamos, el saldo en pesos AUMENTA en algunos períodos
+   • Período 3→4: De $326M a $344.9M (+$18.9M)
+   • Esto pasa cuando la TRM sube más rápido de lo que amortizamos
+
+💡 LECCIÓN CLAVE:
+En un crédito en dólares con TRM volátil, puedes estar pagando puntualmente 
+pero deber MÁS en pesos si la TRM sube significativamente. Esto se llama 
+"amortización negativa" y es un riesgo real del financiamiento en moneda 
+extranjera.
+
+================================================================================
+6. ANÁLISIS DE SENSIBILIDAD Y VOLATILIDAD
+================================================================================
+
+6.1 Métricas de Volatilidad de la TRM
+-------------------------------------
+[TABLA 8: Estadísticas de la TRM Proyectada]
+
+<img width="778" height="188" alt="image" src="https://github.com/user-attachments/assets/815767da-55dd-4cf6-a762-5d6f3ab0d72b" />
+
+📊 ¿QUÉ NOS DICEN ESTAS CIFRAS?
+
+1. RANGO DE VARIACIÓN ($1,444.57):
+   • La diferencia entre el mínimo y máximo es SIGNIFICATIVA
+   • Representa un 39.16% de variación
+   • Es como si el precio de un carro de $100 millones pudiera subir a 
+     $139 millones o bajar a $61 millones
+
+2. VOLATILIDAD ANUAL (14.07%):
+   • Indica qué tanto "se mueve" la TRM en un año
+   • 14% es ALTA volatilidad para una variable financiera
+   • Compara: La inflación usualmente varía 1-3% anual
+   • La TRM puede variar 14% → ¡Mucho más riesgosa!
+
+3. DESVIACIÓN ESTÁNDAR ($412.35):
+   • En promedio, la TRM se desvía $412 de su valor esperado
+   • Esto significa que en cualquier trimestre, la TRM podría ser 
+     $412 más alta o más baja de lo proyectado
+   • Impacto en una cuota: $3,169.62 × $412 = $1.3 millones adicionales
+
+6.2 Períodos Críticos de Mayor Volatilidad
+------------------------------------------
+Análisis :
+
+⚠️ PERÍODOS DE ALTO RIESGO IDENTIFICADOS:
+
+1. PERÍODOS 10-14 (Año 3-4):
+   • TRM alcanza $5,133.03 (máximo histórico proyectado)
+   • Variación: +39.16% vs TRM inicial
+   • Cuota en pesos: ~$16.3 millones
+   • Recomendación: Tener liquidez adicional en este período
+
+2. PERÍODOS 32-36 (Año 8-9):
+   • Segundo pico de volatilidad
+   • TRM proyectada: $4,800-5,000
+   • Cuota en pesos: ~$15.5 millones
+   • Recomendación: Revisar cobertura en este período
+
+3. PERÍODOS 1-4 (Año 1):
+   • Aumento rápido inicial
+   • TRM sube de $3,688 a $4,311
+   • Cuota sube de $12.1M a $13.7M (+13.2%)
+   • Recomendación: Impacto inicial fuerte, planificar flujo de caja
+
+================================================================================
+7. COMPARACIÓN CON CRÉDITO LOCAL EN PESOS
+================================================================================
+
+7.1 Análisis Comparativo
+------------------------
+[TABLA 9: Crédito USD vs Crédito COP Local]
+
+<img width="842" height="189" alt="image" src="https://github.com/user-attachments/assets/e13db242-e8a4-4d06-b6ed-d98dffee3877" />
+
+🤔 ¿CONVIENE MÁS EL CRÉDITO EN USD O EN COP?
+
+VENTAJAS DEL CRÉDITO EN USD:
+✓ Tasa de interés más baja (8.25% vs 13.50%)
+✓ Ahorro en intereses de $28.9 millones (sin contar riesgo cambiario)
+✓ Acceso a mayor monto de financiamiento
+✓ Posibilidad de cobertura con forwards
+
+DESVENTAJAS DEL CRÉDITO EN USD:
+✗ Riesgo cambiario de $111.4 millones
+✗ Incertidumbre en el flujo de caja
+✗ Necesidad de instrumentos de cobertura
+✗ Complejidad administrativa
+
+CONCLUSIÓN DEL ANÁLISIS:
+• Sin cobertura: Crédito en COP es MÁS SEGURO (aunque más costoso en tasa)
+• Con cobertura (forwards): Crédito en USD puede ser MÁS ECONÓMICO
+• Diferencia final: $47.7 millones a favor del crédito en COP sin cubrir
+• PERO con forwards adecuados, el crédito en USD podría ahorrar dinero
+
+💡 RECOMENDACIÓN:
+El crédito en USD SOLO es recomendable si:
+1. Se cubre el riesgo cambiario con forwards
+2. La empresa genera ingresos en dólares
+3. Se tiene capacidad de absorber volatilidad
+
+================================================================================
+8. CONCLUSIONES DEL PUNTO 3
+================================================================================
+
+8.1 Hallazgos Principales
+-------------------------
+✓ 1. IMPACTO CAMBIARIO SIGNIFICATIVO:
+   • El riesgo cambiario representa $111.4 millones adicionales (23.82%)
+   • Esto supera el ahorro por la menor tasa de interés
+   • Sin cobertura, el crédito en USD es MÁS COSTOSO que uno local
+
+✓ 2. VOLATILIDAD ALTA PROYECTADA:
+   • Volatilidad anual del 14.07%
+   • Rango de variación de $1,444.57 COP/USD
+   • Períodos críticos identificados en años 3-4 y 8-9
+
+✓ 3. INCERTIDUMBRE EN EL FLUJO DE CAJA:
+   • Las cuotas en pesos varían entre $12.1M y $16.3M
+   • Diferencia de $4.2 millones por trimestre
+   • Dificulta la planificación financiera
+
+✓ 4. ESCENARIOS EXTREMOS PREOCUPANTES:
+   • Escenario Alcista: Costo de $1,240 millones (+114%)
+   • Escenario Bajista: Costo de $393 millones (-32%)
+   • Diferencia entre escenarios: $847 millones
+
+✓ 5. AMORTIZACIÓN NEGATIVA POSIBLE:
+   • El saldo en pesos puede AUMENTAR aunque se pague
+   • Ocurre cuando la TRM sube más rápido que la amortización
+   • Riesgo real en períodos de devaluación fuerte
+
+8.2 Recomendaciones
+-------------------
+📌 1. COBERTURA OBLIGATORIA CON FORWARDS:
+   • Contratar forwards para cubrir al menos 75-100% del flujo
+   • Esto elimina la incertidumbre y fija el costo en pesos
+   • Costo del forward: Usualmente 0.5-2% anual
+   • Beneficio: Elimina riesgo de $111.4 millones
+
+📌 2. MONITOREO CONTINUO DE LA TRM:
+   • Revisar trimestralmente la evolución vs proyección
+   • Ajustar estrategia de cobertura si es necesario
+   • Mantener alerta en períodos críticos (10-14, 32-36)
+
+📌 3. FONDO DE CONTINGENCIA:
+   • Mantener reservas por $50-70 millones
+   • Para absorber picos de volatilidad no cubiertos
+   • Representa 3-5 cuotas adicionales
+
+📌 4. EVALUAR INGRESOS EN DÓLARES:
+   • Si la empresa exporta o recibe USD, el riesgo se reduce
+   • Los ingresos en dólares cubren naturalmente el crédito
+   • Esto se llama "cobertura natural"
+
+📌 5. CONSIDERAR CRÉDITO HÍBRIDO:
+   • 50% en USD con forwards + 50% en COP
+   • Diversifica el riesgo
+   • Balance entre tasa baja y estabilidad
+
+8.3 Reflexión Final (Perspectiva Estudiantil)
+---------------------------------------------
+El Punto 3 nos enseña una lección FUNDAMENTAL en finanzas internacionales:
+
+"UNA TASA DE INTERÉS BAJA NO SIEMPRE SIGNIFICA UN CRÉDITO MÁS BARATO"
+
+En este caso:
+• Crédito USD: Tasa 8.25% → PERO con riesgo de $111.4 millones
+• Crédito COP: Tasa 13.50% → PERO sin riesgo cambiario
+
+La decisión correcta depende de:
+1. Nuestra capacidad de gestionar el riesgo
+2. Nuestra disposición a pagar por certidumbre
+3. Nuestras expectativas sobre la TRM
+4. Nuestra habilidad para usar instrumentos de cobertura
+
+CONCLUSIÓN FINAL:
+El crédito en dólares es una HERRAMIENTA PODEROSA pero PELIGROSA si no se 
+gestiona adecuadamente. Sin forwards, es una APUESTA sobre la TRM. Con 
+forwards, es una herramienta de financiamiento inteligente.
+
+================================================================================
+REFERENCIAS BIBLIOGRÁFICAS
+================================================================================
+
+1. Banco de la República de Colombia. (2026). Tasa Representativa del 
+   Mercado (TRM) Histórica. www.banrep.gov.co
+2. Hull, J. C. (2022). Options, Futures, and Other Derivatives. 
+   Pearson Education.
+3. Eiteman, D. K., Stonehill, A. I., & Moffett, M. H. (2021). 
+   Multinational Business Finance. Pearson.
+4. Madura, J. (2020). International Financial Management. 
+   Cengage Learning.
+5. Ministerio de Hacienda de Colombia. (2026). Marco Fiscal de 
+   Mediano Plazo.
+6. FMI (Fondo Monetario Internacional). (2026). World Economic Outlook 
+   y Proyecciones para Colombia. www.imf.org
+7. Bloomberg Terminal. (2026). Datos de Mercados Cambiarios y 
+   Proyecciones de TRM.
+8. Investopedia. (2026). Currency Risk and Exchange Rate Exposure. 
+   www.investopedia.com
+9. Federal Reserve. (2026). Exchange Rates and Economic Indicators. 
+   www.federalreserve.gov
+10. Asociación Bancaria de Colombia. (2026). Tasas de Interés de 
+    Referencia para Créditos en Pesos.
+
+
+
+
+
+
+
+
 
 
 
