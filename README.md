@@ -202,6 +202,21 @@ Costo con TRM constante: $316,335,591.23 COP
 Costo con TRM proyectada: $323,167,648.70 COP
 Impacto: $6,832,057.47 COP (+2.16%)
 
+3.5 ANÁLISIS DE RIESGO
+---------------------
+• El crédito en USD expone al riesgo cambiario
+• Variación TRM proyectada: -5.17%
+• Rango de incertidumbre: $138.08 MILLONES de COP
+• Se recomienda cobertura con forwards para eliminar incertidumbre
+
+3.6 TABLA DE AMORTIZACIÓN EN COP (PRIMEROS 10 PERÍODOS)
+------------------------------------------------------
+<img width="782" height="307" alt="image" src="https://github.com/user-attachments/assets/3903db6a-cd3c-4586-bfcb-a2ddddde44f6" />
+
+3.7 TABLA DE AMORTIZACIÓN EN COP (ÚLTIMOS 10 PERÍODOS)
+-----------------------------------------------------
+<img width="734" height="307" alt="image" src="https://github.com/user-attachments/assets/c7b686bd-fde1-4357-a81f-e4af045a79c8" />
+
 GRÁFICA 3.1
 
 <img width="2970" height="1781" alt="punto3_comparacion_escenarios" src="https://github.com/user-attachments/assets/088e1428-91b4-431f-a09d-54ffbe6bcc9d" />
@@ -239,3 +254,278 @@ Instrucciones para el equipo:
 Análisis:
 [Escriban aquí su análisis conjunto del Punto 3]
 
+
+                    PUNTO 4: SIMULACIÓN MONTE CARLO CON BMG
+================================================================================
+
+4.1 INFORMACIÓN GENERAL
+----------------------
+Fecha de Generación: 2026-03-28
+Horizonte de Simulación: 5 años (60 meses)
+Número de Simulaciones: 1,000
+TRM Inicial: $3,750.88 COP/USD
+Rango TRM Realista: $2,890 - $4,500 COP/USD
+Punto Medio TRM: $3,695 COP/USD
+
+4.2 VALORES DEL PUNTO 2 (PARA REFERENCIA)
+----------------------------------------
+Total a Pagar (con intereses): $95,292.89 USD
+Valor Maquinaria (principal): $64,460.92 USD
+Intereses Totales: $27,748.78 USD
+
+4.3 ESTADÍSTICAS DE RETORNOS MENSUALES
+-------------------------------------
+Período Analizado: 2019-2024 (60 meses)
+Media Mensual: 0.002760 (0.2760%)
+Desviación Estándar Mensual: 0.014772 (1.4772%)
+
+4.4 PARÁMETROS DE SIMULACIÓN (ANUALIZADOS)
+-----------------------------------------
+<img width="504" height="142" alt="image" src="https://github.com/user-attachments/assets/7e75c3c6-0584-48b1-8e51-03aa09bd3b32" />
+
+4.5 RESULTADOS SIMULACIÓN - DISTRIBUCIÓN NORMAL
+----------------------------------------------
+<img width="514" height="167" alt="image" src="https://github.com/user-attachments/assets/620171b0-184e-4874-872b-757c6cbce9ac" />
+
+4.6 RESULTADOS SIMULACIÓN - DISTRIBUCIÓN T-STUDENT
+-------------------------------------------------
+<img width="502" height="159" alt="image" src="https://github.com/user-attachments/assets/4d48024f-7d88-405b-93f4-5c86320a2e95" />
+
+4.7 ANÁLISIS DE RIESGO PARA EL CRÉDITO (PUNTO 2)
+-----------------------------------------------
+• Escenario TRM Mínimo: $275,396,452 COP
+• Escenario TRM Máximo: $428,818,005 COP
+• Variación potencial: $153,421,553 COP (~$153.42M)
+
+4.8 PRIMEROS 10 RETORNOS MENSUALES
+---------------------------------
+<img width="444" height="262" alt="image" src="https://github.com/user-attachments/assets/1f4f6429-551b-4510-902f-ebb36b57a78d" />
+
+4.9 ÚLTIMOS 10 RETORNOS MENSUALES
+--------------------------------
+<img width="435" height="256" alt="image" src="https://github.com/user-attachments/assets/44606e4e-58c5-47fe-a481-30cf1217b70e" />
+
+GRÁFICA 4.1
+
+<img width="2970" height="1781" alt="punto4_distribucion_retornos" src="https://github.com/user-attachments/assets/7b673050-6200-47ee-8efa-dab17b61ce52" />
+DESCRIPCIÓN: Histograma de retornos mensuales de la TRM (barras moradas) 
+con curva de densidad normal teórica superpuesta (línea roja). Muestra 
+que los datos reales tienen colas más pesadas que la normal, justificando 
+el uso de distribución T-Student.
+
+GRÁFICA 4.2
+
+<img width="4170" height="1784" alt="punto4_serie_historica_trm" src="https://github.com/user-attachments/assets/4ee40a6e-b8c1-4eb4-b898-93919ecfe330" />
+DESCRIPCIÓN: Evolución temporal de la TRM durante 5 años (línea azul) 
+desde 2019 hasta 2024. Incluye líneas de referencia horizontales: 
+Mínimo $2,890 (verde punteada), Punto Medio $3,695 (naranja discontinua), 
+Máximo $4,500 (rojo punteada). Muestra tendencia alcista desde 2022.
+
+GRÁFICA 4.3
+
+<img width="3571" height="2099" alt="punto4_distribucion_final" src="https://github.com/user-attachments/assets/c482dba7-f288-4407-87ac-e4f5250770cc" />
+DESCRIPCIÓN: Comparación de distribuciones de probabilidad para TRM 
+proyectada a 5 años. Curva azul continua (Distribución Normal) vs curva 
+roja discontinua (T-Student con colas pesadas). Incluye VaR 95% para 
+ambas distribuciones y líneas de referencia de TRM Actual, Punto Medio, 
+Mínimo y Máximo.
+
+GRÁFICA 4.4
+
+<img width="3570" height="1784" alt="punto4_trayectorias_normal" src="https://github.com/user-attachments/assets/3a248ec3-64c7-4841-896a-9846e35e8c47" />
+DESCRIPCIÓN: 30 simulaciones de caminos aleatorios (líneas azul claro) 
+usando Movimiento Browniano Geométrico con distribución Normal durante 
+5 años. Línea azul oscuro gruesa muestra la media. Incluye líneas de 
+referencia: Mínimo $2,890 (verde punteada), Punto Medio $3,695 (naranja 
+discontinua), Máximo $4,500 (rojo punteada).
+
+GRÁFICA 4.5
+
+<img width="3570" height="1784" alt="punto4_trayectorias_tstudent" src="https://github.com/user-attachments/assets/5bac4adf-8b30-4282-adcb-bd5434c10e45" />
+DESCRIPCIÓN: 30 simulaciones de caminos aleatorios (líneas naranja claro) 
+usando BMG con distribución T-Student durante 5 años. Línea marrón rojizo 
+gruesa muestra la media. Mayor dispersión que refleja colas pesadas. 
+Incluye mismas líneas de referencia que gráfica anterior.
+
+4.8 ANÁLISIS DEL EQUIPO - PUNTO 4
+---------------------------------
+[ESPACIO PARA ANÁLISIS DEL EQUIPO]
+
+Instrucciones para el equipo:
+• ¿Por qué es importante usar simulación Monte Carlo en lugar de una 
+  proyección simple?
+• ¿Qué diferencias observan entre la distribución Normal y T-Student?
+• ¿Cómo se relacionan estos resultados con los Puntos 2 y 3?
+
+Análisis:
+[Escriban aquí su análisis conjunto del Punto 4]
+
+
+
+                    PUNTO 5: ANÁLISIS DE FORWARD Y COBERTURA CAMBIARIA
+================================================================================
+
+5.1 INFORMACIÓN FORWARD SET-FX
+------------------------------
+
+<img width="486" height="295" alt="image" src="https://github.com/user-attachments/assets/0314fc20-0078-4641-8f05-a0cf1ac26932" />
+
+5.2 DATOS SPOT USDCOP=X (ÚLTIMOS 2 AÑOS)
+---------------------------------------
+
+<img width="508" height="224" alt="image" src="https://github.com/user-attachments/assets/c5aee6f7-4b5c-4fe7-b601-d4472daff79c" />
+
+5.3 PARÁMETROS DE LA INVERSIÓN
+-----------------------------
+
+<img width="519" height="336" alt="image" src="https://github.com/user-attachments/assets/f050ad66-4309-45ef-9918-a65e8f639f7c" />
+
+5.4 RESULTADOS SIMULACIÓN MONTE CARLO (50,000 ITERACIONES)
+---------------------------------------------------------
+
+<img width="511" height="277" alt="image" src="https://github.com/user-attachments/assets/2d7dfd5d-5452-410b-9405-34a3db3719d6" />
+
+5.5 PERCENTILES DE LA DISTRIBUCIÓN
+---------------------------------
+
+<img width="518" height="206" alt="image" src="https://github.com/user-attachments/assets/67371066-9f47-47cc-ae8d-51154cbbf058" />
+Interpretación: ↓ = Forward más caro | ↑ = Forward más barato
+
+5.6 ANÁLISIS DE PROTECCIÓN
+-------------------------
+
+<img width="512" height="130" alt="image" src="https://github.com/user-attachments/assets/2fa388b0-4237-42be-8572-4f1bb7ed1e18" />
+
+ESCENARIOS PROTEGIDOS (Spot Futuro > Forward) - AHORROS:
+
+<img width="510" height="189" alt="image" src="https://github.com/user-attachments/assets/3d8ed721-ce5f-4dab-8f94-27a7a1e419d3" />
+
+ESCENARIOS NO PROTEGIDOS (Spot Futuro ≤ Forward) - PÉRDIDAS:
+
+<img width="496" height="187" alt="image" src="https://github.com/user-attachments/assets/cf88b260-d9ad-4112-a889-1ed0e9f21caf" />
+
+5.7 ANÁLISIS DE FLUJO TOTAL
+--------------------------
+
+<img width="503" height="242" alt="image" src="https://github.com/user-attachments/assets/68540d5c-3809-4112-96b4-3173633156bc" />
+Conclusión: El forward es MENOS conveniente por $182.8 millones de pesos
+
+5.8 ANÁLISIS DE RIESGO (VaR Y CVaR)
+----------------------------------
+
+<img width="502" height="198" alt="image" src="https://github.com/user-attachments/assets/81ff8312-c0cd-47be-a447-183b22cfb31b" />
+Nota: VaR = Value at Risk | CVaR = Conditional Value at Risk
+
+5.9 ANÁLISIS COSTO-BENEFICIO
+---------------------------
+
+<img width="504" height="260" alt="image" src="https://github.com/user-attachments/assets/0e4e79c9-3335-4e34-ba7b-aa0d64dfcebc" />
+
+5.10 CRITERIOS DE EVALUACIÓN
+---------------------------
+
+<img width="509" height="173" alt="image" src="https://github.com/user-attachments/assets/c6382f75-7b30-4062-924e-58b8b25ad942" />
+
+GRÁFICAS
+
+GRÁFICA 5.1
+
+<img width="3019" height="1796" alt="03_comparacion_flujo_total" src="https://github.com/user-attachments/assets/a52f1e15-0381-4f81-b347-f8188109f7ea" />
+DESCRIPCIÓN: Gráfico de barras comparando el costo total sin cobertura 
+(usando media y mediana) versus con forward (fijo). Muestra claramente 
+la diferencia de $182 millones y si el forward es más o menos conveniente
+
+GRÁFICA 5.2
+
+<img width="3473" height="1859" alt="05_analisis_sensibilidad" src="https://github.com/user-attachments/assets/630d8663-dda0-42c5-9b48-975512948b06" />
+DESCRIPCIÓN: Barras agrupadas por percentil (P5, P10, P25, P50, P75, P90, 
+P95) comparando pago con spot (azul) vs pago con forward (rojo). Indica 
+cuál es la mejor opción en cada percentil de la distribución.
+
+GRÁFICA 5.3
+
+<img width="3486" height="1956" alt="04_serie_historica_spot" src="https://github.com/user-attachments/assets/2f89ca7c-3900-4859-ac49-914c4ca12831" />
+DESCRIPCIÓN: Serie histórica del spot USDCOP=X de los últimos 2 años con 
+líneas horizontales del forward ($3,968.63), spot actual ($3,671.78) y 
+promedio histórico. Muestra la volatilidad histórica y la posición 
+relativa del forward.
+
+GRÁFICA 5.4
+
+<img width="3519" height="1861" alt="01_distribucion_spot_forward" src="https://github.com/user-attachments/assets/6de54135-f242-4ece-b066-ff90bf851c2f" />
+DESCRIPCIÓN: Histograma del spot futuro simulado con curva de densidad 
+normal. Muestra la línea vertical del forward ($3,968.63), el spot actual 
+($3,671.78) y la media de simulación. Permite visualizar la probabilidad 
+de que el spot futuro supere al forward.
+
+GRÁFICA 5.5
+
+<img width="4329" height="1939" alt="02_escenarios_proteccion" src="https://github.com/user-attachments/assets/5a4ebed5-3204-440e-a740-5703856074e7" />
+DESCRIPCIÓN: Dos histogramas lado a lado comparando escenarios protegidos 
+(verde, 18.02%) vs no protegidos (naranja, 81.98%). Cada panel muestra 
+la línea del forward y la media de cada grupo. Visualiza claramente por 
+qué el forward no es conveniente en la mayoría de casos.
+
+GRÁFICA 5.6
+
+<img width="4447" height="3451" alt="08_corto_largo_long" src="https://github.com/user-attachments/assets/25332cfb-460f-4853-a1e4-4760eda29947" />
+DESCRIPCIÓN: Cuatro paneles mostrando análisis de posición LONG en forward:
+(1) Distribución corto plazo 6 meses, (2) Distribución largo plazo 24 meses,
+(3) Payoff comparativo con boxplots, (4) Evolución de la media mostrando 
+tendencia decreciente
+
+GRÁFICA 5.7
+
+<img width="4447" height="3451" alt="09_corto_largo_short" src="https://github.com/user-attachments/assets/a82d6ee9-eb27-4e57-810b-0ad13a6411c4" />
+DESCRIPCIÓN: Cuatro paneles mostrando análisis de posición SHORT en forward:
+(1) Distribución corto plazo 6 meses (naranja), (2) Distribución largo 
+plazo 24 meses, (3) Payoff comparativo con boxplots, (4) Evolución de la 
+media mostrando tendencia decreciente.
+
+GRÁFICA 5.8
+
+<img width="4416" height="3451" alt="10_comparacion_long_short" src="https://github.com/user-attachments/assets/11ca85ae-7784-4b7a-9ff1-1acfc8b78629" />
+DESCRIPCIÓN: Cuatro paneles comparando posiciones Long (verde) vs Short 
+(naranja): (1) Distribución spot corto plazo, (2) Distribución spot largo 
+plazo, (3) Payoff vs Spot corto plazo mostrando líneas cruzadas, 
+(4) Payoff vs Spot largo plazo con mayor dispersión.
+
+GRÁFICA 5.9
+
+<img width="4414" height="1983" alt="07_analisis_riesgo_var" src="https://github.com/user-attachments/assets/9cd82d5d-d9b1-4b83-9956-026563d48c9b" />
+DESCRIPCIÓN: Dos paneles lado a lado. Panel izquierdo: Value at Risk 
+(VaR 95%) comparando Sin cobertura (naranja) vs Con forward (azul). 
+Panel derecho: Conditional VaR (CVaR 95%) con misma comparación. 
+Muestra que el forward aumenta el VaR pero elimina la incertidumbre.
+
+GRÁFICA 5.10
+
+<img width="3486" height="1859" alt="06_caminos_simulados" src="https://github.com/user-attachments/assets/1be29501-2259-4284-bf30-3646167b5e67" />
+DESCRIPCIÓN: Evolución de 100 caminos simulados de la TRM durante 6 meses 
+mostrando la incertidumbre. Incluye línea de la media (roja gruesa) y 
+línea del forward (roja punteada en $3,968.63). Muestra dispersión y 
+tendencia de las trayectorias.
+
+RESUMEN: 1 de 5 criterios cumplidos (20%)
+
+RECOMENDACIÓN FINAL: ❌ NO CONTRATAR FORWARD
+Justificación:
+• El forward es más costoso en 81.98% de los escenarios
+• Solo protege en 18.02% de los casos
+• Beneficio neto esperado negativo: -$171,111,646 COP
+• Relación B/C de 0.11 (por cada $1 de costo, solo retorna $0.11)
+• Solo conviene si hay extrema aversión al riesgo
+• Alternativa: Negociar tasa forward más competitiva o no cubrir
+
+5.11 ANÁLISIS DEL EQUIPO - PUNTO 5
+----------------------------------
+[ESPACIO PARA ANÁLISIS DEL EQUIPO]
+
+Instrucciones para el equipo:
+• ¿Por qué el forward solo protege en 18.02% de los escenarios?
+• ¿Es conveniente eliminar el riesgo aunque sea costoso?
+• ¿Qué alternativas de cobertura podrían evaluarse?
+• ¿Cómo se relaciona este análisis con los resultados del Punto 4?
+
+Análisis:
+[Escriban aquí su análisis conjunto del Punto 5]
