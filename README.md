@@ -81,15 +81,10 @@ Muestra tendencia alcista de ~2,900 a ~3,700 COP/USD.
 
 1.7 ANÁLISIS DEL EQUIPO - PUNTO 1
 ---------------------------------
-[ESPACIO PARA ANÁLISIS DEL EQUIPO]
-
-Instrucciones para el equipo:
-• ¿Qué factores consideran más relevantes para la proyección de la TRM?
-• ¿Cómo afecta el contexto electoral a la volatilidad cambiaria?
-• ¿Qué implicaciones tiene la señal bajista para la empresa?
-
-Análisis:
-[Escriban aquí su análisis conjunto del Punto 1]
+Hallazgo Principal: El mercado planea un peso colombiano más débil, pero con alta inseguridad.
+Nuestro análisis de la Tasa Representativa del Mercado (TRM) indica que nos encontramos en un punto de desvio. Actualmente, la TRM está en $3,688 COP/USD, pero las proyecciones a 12 meses sugieren un promedio de $4,004 COP, lo que implica una depreciación esperada del 8.55%.
+Sin embargo, lo más crítico para la toma de decisiones no es solo el promedio, sino la volatilidad. Factores como el diferencial de tasas de interés (Colombia 9.25% vs. EE.UU. 5.25%), se están generando un rango de movimiento muy amplio (entre $3,550 y $4,900 en escenarios extremos).
+En este contexto; No podemos asumir que el dólar se va a mantener estable. La tendencia fundamental es creciente para el dólar, por el contrario para el peso, lo que nos dice que cualquier deuda en moneda extranjera se encarecerá naturalmente con el tiempo si no se gestiona. Lo que parece una caída en este momento podría no ser real si no analizamos la situación económica a largo plazo.
 
 
                     PUNTO 2: SIMULACIÓN DE CRÉDITO EN USD
@@ -155,19 +150,10 @@ DESCRIPCIÓN: Cuatro paneles mostrando:
 
 2.8 ANÁLISIS DEL EQUIPO - PUNTO 2
 ---------------------------------
-[ESPACIO PARA ANÁLISIS DEL EQUIPO]
-
-Instrucciones para el equipo:
-• ¿Por qué se seleccionó la tasa del 8.25% entre las opciones disponibles?
-• ¿Qué observan en la tabla de amortización sobre el comportamiento de 
-  intereses vs capital?
-• ¿Cuáles son los riesgos de tomar un crédito en USD siendo una empresa 
-  colombiana?
-
-Análisis:
-[Escriban aquí su análisis conjunto del Punto 2]
-
-
+Hallazgo Principal: La tasa de interés es competitiva, pero el costo real depende del tipo de cambio.
+Hemos estructurado un crédito por $64,460 USD para la compra de maquinaria, logrando una tasa de interés del 8.25% anual, la cual es competitiva frente al promedio del mercado (que oscila entre 7.87% y 10.50%). A primera vista, el costo financiero total del 47.83% sobre 10 años parece manejable en dólares.
+El riesgo aquí es de "ilusión monetaria". Si miramos solo los dólares, la cuota trimestral es fija ($2,144 USD). Pero para nuestra empresa que opera en pesos, esa cuota es variable. En los primeros años, pagamos mayormente intereses (ej. $1,196 de interés vs. $947 de capital en la primera cuota), Esto quiere decir que el riesgo por el cambio de moneda es más alto al inicio del crédito, justo cuando menos capacidad tenemos para pagar.
+Lo que para nosotros implica que, Obtuvimos buen financiamiento en términos de tasa de interés, Pero ahora tenemos una exposición al dólar de casi 351 millones de pesos (con la tasa actual). Si el dólar sube, ese “ahorro” en intereses se pierde por el cambio en la tasa de cambio.
 
                     PUNTO 3: CRÉDITO EN COP CON ANÁLISIS DE ESCENARIOS
 ================================================================================
@@ -244,15 +230,12 @@ discontinua).
 
 3.6 ANÁLISIS DEL EQUIPO - PUNTO 3
 ---------------------------------
-[ESPACIO PARA ANÁLISIS DEL EQUIPO]
-
-Instrucciones para el equipo:
-• ¿Qué significa una variación de $138 millones entre escenarios?
-• ¿Cómo afecta esto la planificación financiera de la empresa?
-• ¿Por qué es importante considerar múltiples escenarios de TRM?
-
-Análisis:
-[Escriban aquí su análisis conjunto del Punto 3]
+Hallazgo Principal: La diferencia entre un escenario favorable y uno adverso es de $138 millones de pesos.
+Al convertir la deuda a pesos colombianos (COP), la magnitud del riesgo se hace evidente. No se trata de cambios pequeños. Nuestra simulación muestra que el costo total del crédito puede cambiar mucho.
+•	Escenario Optimista (TRM $2,890): Pagaríamos $247.9 millones.
+•	Escenario Pesimista (TRM $4,500): Pagaríamos $385.9 millones.
+Esa diferencia de 138 millones de pesos equivale a más del 55% de cambio en nuestro flujo de caja que tendremos. Incluso en el escenario base que proyectamos, el efecto del tipo de cambio nos genera un costo extra de 6,8 millones frente a dejar la TRM igual.
+Esto nos dice que La planificación financiera tradicional (basada en un solo número) es insuficiente. Si nos equivocamos en la proyección del dólar, podríamos enfrentar una falta de dinero por cientos de millones. Necesitamos saber no solo cuánto esperamos pagar, sino cuál es el "peor caso" razonable que debemos soportar.7
 
 
                     PUNTO 4: SIMULACIÓN MONTE CARLO CON BMG
@@ -349,18 +332,10 @@ Incluye mismas líneas de referencia que gráfica anterior.
 
 4.8 ANÁLISIS DEL EQUIPO - PUNTO 4
 ---------------------------------
-[ESPACIO PARA ANÁLISIS DEL EQUIPO]
-
-Instrucciones para el equipo:
-• ¿Por qué es importante usar simulación Monte Carlo en lugar de una 
-  proyección simple?
-• ¿Qué diferencias observan entre la distribución Normal y T-Student?
-• ¿Cómo se relacionan estos resultados con los Puntos 2 y 3?
-
-Análisis:
-[Escriban aquí su análisis conjunto del Punto 4]
-
-
+Hallazgo Principal: Los modelos matemáticos confirman que los eventos extremos son más probables de lo que pensamos.
+Aplicamos una simulación Monte Carlo (con BMG) con 1.000 iteraciones y encontramos que la TRM no sigue una forma totalmente normal. Al comparar la distribución normal con la T-Student, encontramos que esta última, que tiene valores extremos más frecuentes, se ajusta mejor a nuestros datos históricos. Esto significa que los eventos extremos (dólar muy alto o muy bajo) tienen mayor probabilidad de ocurrir de lo que un modelo simple prediría.
+Nuestra proyección a 5 años muestra que el dólar estaría en promedio en $4.253, pero el VaR nos advierte que podría haber caídas importantes. Además, la volatilidad del 5,12% indica que el mercado va a estar en constante cambio.
+Dentro de la empresa esto implica que No podemos basarnos solo en promedios. La ingeniería financiera nos demuestra que sí pueden ocurrir eventos poco comunes pero muy graves. Si ignoramos esto, quedamos expuestos a cambios bruscos del mercado. La simulación confirma que una variación de $153 millones si es posible.
 
                     PUNTO 5: ANÁLISIS DE FORWARD Y COBERTURA CAMBIARIA
 ================================================================================
@@ -519,13 +494,14 @@ Justificación:
 
 5.11 ANÁLISIS DEL EQUIPO - PUNTO 5
 ----------------------------------
-[ESPACIO PARA ANÁLISIS DEL EQUIPO]
+Hallazgo Principal: NO RECOMENDAMOS contratar el Forward bajo las condiciones actuales de mercado.
+Este es el punto más crítico de nuestro análisis. Evaluamos la contratación de un contrato Forward a 6 meses a una tasa de $3,968.63 COP/USD para cubrir una inversión de $500,000 USD. Tras correr 50,000 simulaciones, los resultados son contundentes:
+1.	Desde el punto de vista estadístico, el forward no es muy eficiente: solo funciona a nuestro favor en el 18,02% de los escenarios. En la mayoría, habría sido mejor no cubrirse.
+2.	Esta estrategia genera pérdidas en promedio, con un valor esperado de -$171 millones, lo que significa que sería peor que no tomar ninguna acción.
+3.	El costo de oportunidad es muy alto, ya que por cada peso que gastamos en cobertura, solo obtenemos 11 centavos de beneficio. En otras palabras, estamos pagando de más por una protección que no se justifica tanto.
+Aunque el Forward elimina la volatilidad (lleva el riesgo a cero), lo hace a un precio demasiado alto. Estaríamos asegurando un activo contra un riesgo que, según nuestros modelos, tiene baja probabilidad de materializarse en el corto plazo (6 meses) a niveles que justifiquen la tasa de $3,968.
+No es recomendable tomar este forward, ya que la tasa no es favorable frente al mercado. Es mejor esperar y ver si la tasa mejora, considerar opciones que den más flexibilidad o hacer una cobertura parcial para equilibrar el riesgo y el costo.
 
-Instrucciones para el equipo:
-• ¿Por qué el forward solo protege en 18.02% de los escenarios?
-• ¿Es conveniente eliminar el riesgo aunque sea costoso?
-• ¿Qué alternativas de cobertura podrían evaluarse?
-• ¿Cómo se relaciona este análisis con los resultados del Punto 4?
-
-Análisis:
-[Escriban aquí su análisis conjunto del Punto 5]
+Conclusión general para la gerencia:
+La empresa está en un escenario donde el peso se puede devaluar moderadamente. Aunque el crédito en dólares es atractivo por su tasa del 8,25%, el riesgo cambiario es alto (entre $138M y $153M). Sin embargo, usar el forward no es buena opción, ya que no es eficiente y generaría pérdidas esperadas de $171 millones.
+Por eso, recomendamos tomar el crédito en USD para aprovechar la tasa, pero no contratar ese forward. En su lugar, es mejor buscar opciones más flexibles o esperar mejores condiciones del mercado. Al final, gestionar el riesgo no es eliminarlo a cualquier costo, sino encontrar un equilibrio entre protegerse y mantener la rentabilidad.
